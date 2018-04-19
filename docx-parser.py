@@ -7,7 +7,7 @@ table_end = 2
 
 def get_table(tb):
     table = {}
-    table['name'] = doc.tables[tb].cell(0, 0).text + ' ' + doc.tables[tb].cell(0, 1).text
+    table['name'] = ('{0} {1}'.format(doc.tables[tb].cell(0, 0).text, doc.tables[tb].cell(0, 1).text))
     table['description'] = doc.tables[tb].cell(1, 2).text
     table['requirements'] = doc.tables[tb].cell(3, 2).text
 
